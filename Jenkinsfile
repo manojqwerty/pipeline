@@ -1,7 +1,6 @@
 pipeline {
   agent any
   tools {
-    SONAR_RUNNER_HOME 'sonar scanner'
     maven 'mvn 3.5.2'
   }
   stages {
