@@ -6,13 +6,15 @@ pipeline {
   stages {
        stage('Sonarqube'){
              steps {
-             bat 'sonar-scanner'
+              withSonarQubeEnv('My SonarQube Server') {
+                bat 'sonar:sonar'
                stage('Build') {
                  steps {
                  bat 'mvn clean & mvn package'
                  }
                }
              }
+           }
        }
   }   
 }
