@@ -7,7 +7,7 @@ pipeline {
   stages {
        stage('Sonarqube'){
              steps {
-             bat 'sonnar-scanner'
+             bat 'sonar-scanner'
                stage('Build') {
                  steps {
                  bat 'mvn clean & mvn package'
