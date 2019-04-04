@@ -6,7 +6,7 @@ pipeline {
   stages {
        stage('Sonarqube'){
              steps {
-              withSonarQubeEnv('My SonarQube Server') {
+              withSonarQubeEnv('my sonar server') {
                 bat 'sonar:sonar'
                stage('Build') {
                  steps {
